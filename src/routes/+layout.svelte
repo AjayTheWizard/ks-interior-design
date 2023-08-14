@@ -1,67 +1,51 @@
-<script>
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
-	import { webVitals } from '$lib/vitals';
-	import Header from './Header.svelte';
-	import './styles.css';
-
-	/** @type {import('./$types').LayoutServerData} */
-	export let data;
-
-	$: if (browser && data?.analyticsId) {
-		webVitals({
-			path: $page.url.pathname,
-			params: $page.params,
-			analyticsId: data.analyticsId
-		});
-	}
+<script lang="ts">
+  import { createDialog, melt } from "@melt-ui/svelte";
+  import { writable } from "svelte/store";
+  import "./styles.css";
+  const {
+    states: { open },
+  } = createDialog({
+    open: writable(true),
+  });
 </script>
 
-<div class="app">
-	<Header />
-
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+<div>
+  <nav
+    class="flex w-full items-center border-b border-b-black h-[8vh] sm:justify-between sm:px-4"
+  >
+    <h1 class="mx-auto text-2xl font-light sm:mx-[unset]">
+      KS Interior Designs
+    </h1>
+    <div class="hidden items-center gap-2 sm:flex">
+      <a class="" href="/">Testimonials</a>
+      <a class="bg-gold px-3 py-2 bg-gold-500 text-white" href="/">Contact</a>
+    </div>
+    {#if open}
+      <div
+        class="sm:hidden absolute w-2/3 h-[92vh] left-0 top-[8vh] items-center bg-gold-200 flex flex-col gap-2"
+      >
+        <a class="" href="/">Testimonials</a>
+        <a class="bg-gold px-3 py-2 bg-gold-500 w-fit text-white" href="/"
+          >Contact</a
+        >
+      </div>
+    {/if}
+    <button class="absolute sm:hidden left-4" id="open-ham">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </button>
+  </nav>
+  <slot />
 </div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
