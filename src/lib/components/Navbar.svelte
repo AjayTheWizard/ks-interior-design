@@ -33,6 +33,7 @@
     }}
     class="absolute sm:hidden left-4"
     id="open-ham"
+    aria-label="Menubar"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
