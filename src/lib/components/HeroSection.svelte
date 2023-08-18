@@ -12,7 +12,7 @@
         Make Your Home as in Your Dream
       </h1>
       <button
-        class="bg-gold-200 transition-all duration-300 w-fit hover:bg-gold-400 focus:bg-gold-400 text-gold-700 px-5 py-3 text-xl"
+        class="bg-gold-200 transition-all duration-300 w-fit hover:bg-gold-400 focus:bg-gold-400 text-gold-900 px-5 py-3 text-xl"
         >Learn More</button
       >
     </div>

@@ -35,7 +35,7 @@
     </p>
   </div>
   <div
-    class="flex flex-col items-center justify-center p-8 rounded-b-lg bg-gold-400 text-zinc-600 italic font-thin"
+    class="flex flex-col items-center justify-center p-8 rounded-b-lg bg-gold-400 text-zinc-800 italic font-thin"
   >
     <p class="text-xl font-semibold leadi">{name}</p>
   </div>

@@ -21,7 +21,7 @@
       fill="#FFD700"
     />
   </svg>
-  <div class="w-full bg-gold-500 sm:pb-[10%] pb-5 text-white">
+  <div class="w-full bg-gold-500 sm:pb-[10%] pb-5 text-black">
     <h1 class="sm:text-4xl text-2xl cursor-pointer font-bold text-center mb-6">
       How we do?
     </h1>
