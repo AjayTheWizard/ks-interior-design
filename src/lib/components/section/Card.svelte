@@ -33,8 +33,8 @@
     </div>
   {/if}
   <picture>
-    <source srcset={`/${title.toLowerCase()}.webp`} type="image/webp">
-    <source srcset={`/${title.toLowerCase()}.jpg`} type="image/jpg">
+    <source src={`/${title.toLowerCase()}.webp`} type="image/webp">
+    <source src={`/${title.toLowerCase()}.jpg`} type="image/jpg">
     <img src={`/${title.toLowerCase()}.jpg`} alt={`${title} image`}/>
   </picture>
   {#if position === "start"}
