@@ -35,7 +35,7 @@
   <picture>
     <source srcset={`/${title.toLowerCase()}.webp`} type="image/webp">
     <source srcset={`/${title.toLowerCase()}.jpg`} type="image/jpg">
-    <img src={`/${title.toLowerCase()}.png`} alt={`${title} image`}/>
+    <img src={`/${title.toLowerCase()}.jpg`} alt={`${title} image`}/>
   </picture>
   {#if position === "start"}
     <div class="md:w-[35vw] sm:w-[40vw] w-[50vw] hidden sm:block">
