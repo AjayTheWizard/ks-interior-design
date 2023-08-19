@@ -32,14 +32,11 @@
       </p>
     </div>
   {/if}
-  <img
-    loading="lazy"
-    class={`sm:w-[30vw] sm:mb-0 w-[70vw] border-2 border-black ${
-      position === "start" ? "sm:-rotate-12" : "sm:rotate-12"
-    }`}
-    src={`/${title.toLowerCase()}.jpg`}
-    alt={title}
-  />
+  <picture>
+    <source srcset={`/${title.toLowerCase()}.webp`} type="image/webp">
+    <source srcset={`/${title.toLowerCase()}.jpg`} type="image/jpg">
+    <img src={`/${title.toLowerCase()}.png`} alt={`${title} image`}/>
+  </picture>
   {#if position === "start"}
     <div class="md:w-[35vw] sm:w-[40vw] w-[50vw] hidden sm:block">
       <h2
