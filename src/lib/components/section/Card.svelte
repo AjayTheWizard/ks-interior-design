@@ -33,9 +33,9 @@
     </div>
   {/if}
   <picture>
-    <source src={`/${title.toLowerCase()}.webp`} type="image/webp">
-    <source src={`/${title.toLowerCase()}.jpg`} type="image/jpg">
-    <img src={`/${title.toLowerCase()}.jpg`} alt={`${title} image`}/>
+    <source srcset={`/${title.toLowerCase().replace(" ", "_")}.webp`} type="image/webp">
+    <source srcset={`/${title.toLowerCase().replace(" ", "_")}.jpg`} type="image/jpg">
+    <img src={`/${title.toLowerCase().replace(" ", "_")}.jpg`} alt={`${title} image`}/>
   </picture>
   {#if position === "start"}
     <div class="md:w-[35vw] sm:w-[40vw] w-[50vw] hidden sm:block">
