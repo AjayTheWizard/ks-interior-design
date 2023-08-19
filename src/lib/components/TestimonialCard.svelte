@@ -5,7 +5,7 @@
 
 <div class="flex flex-col w-[80vw] md:w-[40vw] xl:max-w-sm mx-4 h-fit my-6 shadow-lg">
   <div
-    class="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gold-200 text-gold-700"
+    class="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gold-100 text-gold-800"
   >
     <p class="relative px-6 py-1 text-lg italic text-center">
       <svg

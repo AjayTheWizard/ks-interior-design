@@ -11,7 +11,7 @@
   <div class="hidden items-center gap-4 sm:flex">
     <a class="" href="#services">Our Services</a>
     <a class="" href="#testimonial">Testimonials</a>
-    <a class="bg-gold px-3 py-2 bg-gold-600 text-white" href="/">Contact</a>
+    <a class="bg-gold px-3 py-2 bg-gold-600 text-black font-semibold" href="/">Contact</a>
   </div>
   <div
     use:clickOutside={function () {
@@ -19,13 +19,13 @@
         open = false;
       }
     }}
-    class={`sm:hidden absolute w-2/3 z-[200] h-[90vh] top-[10vh] items-center bg-white border-r pt-4 font-semibold  border-r-black flex flex-col gap-2 transition-all duration-500 ${
+    class={`sm:hidden absolute w-2/3 z-[200] h-[90vh] top-[10vh] items-center bg-white border-r pt-4 font-semibold  border-r-black flex flex-col gap-4 transition-all duration-500 ${
       open ? "left-0" : "-left-[120vw]"
     }`}
   >
   <a class="" href="#services">Our Services</a>
   <a class="" href="#testimonial">Testimonials</a>
-  <a class="bg-gold px-3 py-2 bg-gold-500 text-white" href="/">Contact</a>
+  <a class="bg-gold px-3 py-2 bg-gold-500 text-black font-semibold" href="/">Contact</a>
   </div>
   <button
     on:click={function () {
