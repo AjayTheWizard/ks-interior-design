@@ -11,7 +11,7 @@
   <div class="hidden items-center gap-4 sm:flex">
     <a class="" href="#services">Our Services</a>
     <a class="" href="#testimonial">Testimonials</a>
-    <a class="bg-gold px-3 py-2 bg-gold-600 text-black font-semibold" href="/">Contact</a>
+    <a class="bg-gold px-3 py-2 bg-gold-600 text-black font-semibold" href="#contact">Contact</a>
   </div>
   <div
     use:clickOutside={function () {
@@ -25,7 +25,7 @@
   >
   <a class="" href="#services">Our Services</a>
   <a class="" href="#testimonial">Testimonials</a>
-  <a class="bg-gold px-3 py-2 bg-gold-500 text-black font-semibold" href="/">Contact</a>
+  <a class="bg-gold px-3 py-2 bg-gold-500 text-black font-semibold" href="#contact">Contact</a>
   </div>
   <button
     on:click={function () {
